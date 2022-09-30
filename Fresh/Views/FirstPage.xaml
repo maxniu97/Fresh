@@ -4,10 +4,21 @@
              xmlns:v="clr-namespace:Fresh.Views"
              x:Class="Fresh.Views.FirstPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout VerticalOptions="Start">
+            <Label Text="&#xef79;" FontFamily ="icofont.ttf#" FontSize="20"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="Start" />
+            <Label Text ="Your current Location"
+            <!--To get the real location use the get the gps LAT/LON and use third API to get street address-->
+            
+            
+            
+            
+            
+            
+            
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

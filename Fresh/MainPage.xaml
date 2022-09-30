@@ -4,6 +4,8 @@
             xmlns:v="clr-namespace:Fresh.Views"
             xmlns:a="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             a:TabbedPage.ToolbarPlacement="Bottom"
+            a:TabbedPage.BarItemColor="#666"
+            a:TabbedPage.BarSelectedItemColor ="Green"
              x:Class="Fresh.MainPage">
    
     
