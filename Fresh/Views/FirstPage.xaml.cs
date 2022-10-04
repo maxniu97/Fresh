@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Fresh.ViewModels;
 
 namespace Fresh.Views
 {
@@ -15,6 +16,8 @@ namespace Fresh.Views
         public FirstPage()
         {
             InitializeComponent();
+
+            this.BindingContext = new firstVM();
         }
     }
 }

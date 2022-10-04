@@ -4,21 +4,66 @@
              xmlns:v="clr-namespace:Fresh.Views"
              x:Class="Fresh.Views.FirstPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Start">
-            <Label Text="&#xef79;" FontFamily ="icofont.ttf#" FontSize="20"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="Start" />
-            <Label Text ="Your current Location"
-            <!--To get the real location use the get the gps LAT/LON and use third API to get street address-->
+        <!--row definition-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <!--row One-->
+            <StackLayout Orientation="Horizontal" HeightRequest="20">
+                    <Label Text="&#xef79;" FontFamily ="icofont.ttf#" FontSize="20"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" />
+                    <!--To get the real location use the provided the gps LAT/LON and use third party API to get street address-->
+
+                    <Label Text ="Your current Location"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"/>
+             </StackLayout>
+                    <Button Text="&#xeeae;" 
+                    FontFamily="icofont.ttf#" 
+                    FontSize="20"
+                    WidthRequest="50"
+                    Background="transparent"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    />
+            <!--row two the search bar-->
+            <Frame CornerRadius="15" Grid.Row="1" BackgroundColor="#09000000" Padding="0,5" Margin="10,0">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <!--->   <Label Text="&#xed11;" FontFamily="icofont.ttf" VerticalOptions="Center" TextColor="#aaa"/>
+                    <Label Text="Enter Product Name" VerticalOptions="Center" HorizontalOptions="Center" Text="#aaa"/> <!-->
+                    <Entry Placeholder="&#xed11; Enter Product Name" FontFamily="icofont.ttf#" FontSize=" 15"/>
+                </StackLayout>
+            </Frame>
+            
+            <!--Row Threee A carousel view element-->
+            <CarouselView Grid.Row="2" HeightRequest="130" ItemsSource="{Binding Carousels}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="8" Margin="10,0" Padding="0" HasShadow="True">
+                            <Image Source="{Binding ImageName}" Aspect="AspectFill"/>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
             
             
             
             
             
             
-            
-            
-            
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
